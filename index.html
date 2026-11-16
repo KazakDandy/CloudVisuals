@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClaudeVisuals — Premium Client</title>
+    <title>CloudVisuals — Premium Client</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -340,7 +340,7 @@
                 </defs>
                 <path d="M17.5 19C19.9853 19 22 16.9853 22 14.5C22 12.1325 20.1601 10.1963 17.8332 10.0326C17.4144 6.60285 14.4862 4 11 4C7.23858 4 4 7.23858 4 11C4 11.2335 4.01291 11.4638 4.03759 11.6895C2.30546 12.3409 1 13.9076 1 15.5C1 17.433 2.567 19 4.5 19H17.5Z" fill="url(#cloudGrad)"/>
             </svg>
-            <div class="logo-text">CLAUDEVISUALS</div>
+            <div class="logo-text">CloudVisuals</div>
         </div>
         <div class="nav-links">
             <a id="nav-welcome">Welcome</a>
@@ -356,7 +356,7 @@
     <div id="main-page">
         <!-- Приветствие -->
         <section class="hero" id="welcome">
-            <h1>Welcome to<br>ClaudeVisuals</h1>
+            <h1>Welcome to<br>CloudVisuals</h1>
             <p>Премиальный визуальный клиент для Minecraft 1.21.11. Кастомный HUD, косметика, оптимизация и стиль в каждой детали.</p>
         </section>
 
@@ -467,7 +467,7 @@
     </section>
 
     <footer>
-        &copy; 2026 ClaudeVisuals. Не является официальным продуктом Mojang.
+        &copy; 2026 CloudVisuals. Не является официальным продуктом Mojang.
     </footer>
 
     <div class="modal-overlay" id="auth-modal">
@@ -664,7 +664,7 @@
                     username: u, 
                     password: p, 
                     hwid: Math.random().toString(36).substring(2, 10).toUpperCase(),
-                    expiryDate: Date.now() + (3650 * 24 * 60 * 60 * 1000), // 10 лет (типа бесконечность)
+                    expiryDate: Date.now() + (3650 * 24 * 60 * 60 * 1000), // 10 лет
                     lastSpin: 0 
                 });
                 localStorage.setItem('cv_users', JSON.stringify(users));
@@ -724,7 +724,7 @@
                 document.getElementById('dash-name').textContent = user.username;
                 document.getElementById('dash-hwid').textContent = user.hwid || 'НЕ ПРИВЯЗАН';
                 
-                // Рулетка доступна всегда, так как подписка бесконечная
+                // Рулетка доступна всегда
                 const now = Date.now();
                 const timeSinceLastSpin = now - (user.lastSpin || 0);
                 const cdText = document.getElementById('cooldown-text');
@@ -751,7 +751,7 @@
 
         // --- Кнопка Установить (Имитация) ---
         document.getElementById('install-btn').addEventListener('click', () => {
-            alert('Начинается скачивание ClaudeVisuals.jar...\n(Это заглушка. В реальности здесь будет ссылка на файл).');
+            alert('Начинается скачивание CloudVisuals.jar...\n(Это заглушка. В реальности здесь будет ссылка на файл).');
         });
 
         // --- Рулетка ---
